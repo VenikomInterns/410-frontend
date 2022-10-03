@@ -1,0 +1,12 @@
+$primary: #494953;
+$secondary: #fdaf00;
+$info: #EEEEEE;
+$dark: #38383e;
+$fa-font-path: '~font-awesome/fonts';
+
+.custom-background-height {
+  min-height: calc(min(100vh, 1000px));
+}
+
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";
