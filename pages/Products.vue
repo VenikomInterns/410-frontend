@@ -6,15 +6,15 @@
         <div class="col-12 col-md-4 col-lg-2 text-center" @click="changeSelected(-1)">
           <div class="card bg-secondary rounded-5 fw-bolder">All categories</div>
         </div>
-        <div v-for="category in categories" class="col-12 col-md-4 col-lg-2 text-center">
+        <div v-for="category in categories" class="col-12 col-md-4 col-lg-2 text-center"><!--Missing :key="" attriubte-->
           <div class="card bg-secondary rounded-5 fw-bolder" @click="changeSelected(category.id)">{{ category.name }}</div>
         </div>
       </div>
 
 
       <div class="row gy-4 gx-4 px-5 py-3">
-        <div class="col-12 col-md-6 col-lg-4" v-for="product in products"
-             v-if="product.category_id === selected || selected===-1" :key="product.id">
+        <div class="col-12 col-md-6 col-lg-4" v-for="product in products" 
+             v-if="product.category_id === selected || selected===-1" :key="product.id"> <!--you can'y use v-for and v-if in same tag-->
           <product-card :product="product"/>
         </div>
       </div>
